@@ -5,68 +5,81 @@ import spaceDefenseImg from 'figma:asset/b87cb29cfbc34b2e16734d73ed866df160d8050
 import seaDefenseImg from 'figma:asset/36cea14b9579506cc1adf1e1a61133404d9cceb2.png';
 import landDefenseImg from 'figma:asset/f58db18958a623d1cf60f1a3fc03dff8e548eed2.png';
 import servicesBg from 'figma:asset/a991fbc6eaec820a2482f0b80965528775302f86.png';
+import { useTranslation } from 'react-i18next';
+import React from 'react';
+import { motion } from 'motion/react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '../components/ui/carousel';
 
 export function ProjectsPage() {
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === 'ar';
+
   const services = [
     {
-      title: 'Air Defense Systems',
-      description: 'Advanced air defense solutions to protect against aerial threats including drones, missiles, and aircraft.',
+      title: t('services.airDefense.title'),
+      description: t('services.airDefense.description'),
       features: [
-        'Radar detection systems',
-        'Missile interception technology',
-        'Real-time threat assessment',
-        'Integrated command & control'
+        t('services.airDefense.features.radar'),
+        t('services.airDefense.features.missile'),
+        t('services.airDefense.features.threat'),
+        t('services.airDefense.features.command')
       ],
       image: airDefenseImg
     },
     {
-      title: 'Space Defense Systems',
-      description: 'Satellite-based defense and surveillance systems for global security operations.',
+      title: t('services.spaceDefense.title'),
+      description: t('services.spaceDefense.description'),
       features: [
-        'Satellite communication networks',
-        'Space-based surveillance',
-        'GPS and navigation systems',
-        'Anti-satellite capabilities'
+        t('services.spaceDefense.features.satellite'),
+        t('services.spaceDefense.features.surveillance'),
+        t('services.spaceDefense.features.gps'),
+        t('services.spaceDefense.features.antiSatellite')
       ],
       image: spaceDefenseImg
     },
     {
-      title: 'Cyber Security Defense System',
-      description: 'We deliver mission-critical cybersecurity solutions designed for complex environments. Our services include threat detection and response, secure systems architecture, and advanced protection for digital assets.',
+      title: t('services.cyberSecurity.title'),
+      description: t('services.cyberSecurity.description'),
       features: [
-        'Threat detection & response',
-        'Secure systems architecture',
-        'Digital asset protection',
-        'Network security monitoring'
+        t('services.cyberSecurity.features.threatDetection'),
+        t('services.cyberSecurity.features.architecture'),
+        t('services.cyberSecurity.features.protection'),
+        t('services.cyberSecurity.features.monitoring')
       ],
       image: cyberSecImg
     },
     {
-      title: 'Sea Defense Systems',
-      description: 'Maritime surveillance and defense systems for coastal and naval operations.',
+      title: t('services.seaDefense.title'),
+      description: t('services.seaDefense.description'),
       features: [
-        'Naval vessel monitoring',
-        'Coastal surveillance radar',
-        'Anti-ship missile systems',
-        'Underwater threat detection'
+        t('services.seaDefense.features.monitoring'),
+        t('services.seaDefense.features.radar'),
+        t('services.seaDefense.features.missile'),
+        t('services.seaDefense.features.detection')
       ],
       image: seaDefenseImg
     },
     {
-      title: 'Land Defense Systems',
-      description: 'Ground-based defense platforms and armored vehicle systems for land operations.',
+      title: t('services.landDefense.title'),
+      description: t('services.landDefense.description'),
       features: [
-        'Armored personnel carriers',
-        'Mobile defense platforms',
-        'Ground surveillance systems',
-        'Tactical communication networks'
+        t('services.landDefense.features.carriers'),
+        t('services.landDefense.features.platforms'),
+        t('services.landDefense.features.surveillance'),
+        t('services.landDefense.features.networks')
       ],
       image: landDefenseImg
     }
   ];
 
   return (
-    <div className="h-screen bg-black relative overflow-hidden">
+    <div className="h-screen bg-black relative overflow-hidden grid grid-rows-[auto_1fr]">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img 
@@ -78,57 +91,106 @@ export function ProjectsPage() {
       </div>
       
       {/* Content */}
-      <div className="relative h-full flex flex-col" style={{ zIndex: 10 }}>
+      <div className="relative z-10">
         <Header />
         
-        <div className="flex-1 flex items-center justify-center px-6 py-6">
-          <div className="container mx-auto max-w-7xl">
-            {/* Hero Section - Compact */}
-            <div className="text-center mb-6 mt-8">
-              <h1 className="text-white text-4xl md:text-5xl mb-2">Our Services</h1>
-              <p className="text-white/70 text-base">
-                Comprehensive defense and security solutions powered by cutting-edge technology
-              </p>
-            </div>
+        {/* المحتوى الحقيقي - يأخذ الصف الثاني من Grid */}
+        <div className="overflow-hidden min-h-0 flex mt-24 md:mt-12 items-center justify-center h-full">
+          <div className="w-full max-w-7xl px-3 sm:px-4 md:px-6 py-2 sm:py-3 flex flex-col justify-center">
+            {/* العنوان */}
+            <motion.div 
+              className={`mb-4 sm:mb-6 ${isRTL ? 'text-right' : 'text-left'}`}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+            >
+              <motion.h1 
+                className="text-white text-2xl sm:text-3xl md:text-4xl mb-2"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
+              >
+                {t('services.title')}
+              </motion.h1>
+              <motion.p 
+                className="text-white/70 text-sm sm:text-base"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+              >
+                {t('services.subtitle')}
+              </motion.p>
+            </motion.div>
 
-            {/* Services Grid - Smaller Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {services.map((service, index) => (
-                <div
-                  key={index}
-                  className="bg-zinc-900/30 rounded-xl overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-500 group backdrop-blur-sm"
-                >
-                  {/* Image - Smaller */}
-                  <div className="h-36 relative overflow-hidden">
-                    <img 
-                      src={service.image}
-                      alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/50 to-transparent" />
-                  </div>
-                  
-                  {/* Content - Compact */}
-                  <div className="p-4">
-                    <h3 className="text-white text-lg mb-2">{service.title}</h3>
-                    <p className="text-white/60 text-sm mb-3 leading-relaxed line-clamp-2">{service.description}</p>
-                    
-                    {/* Features - Compact */}
-                    <ul className="space-y-1.5">
-                      {service.features.slice(0, 3).map((feature, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-white/50 text-xs">
-                          <svg className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              ))}
+            {/* Services Carousel - في جميع قياسات الشاشات */}
+            <div className="w-full relative">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                  dragFree: true,
+                  direction: isRTL ? "rtl" : "ltr",
+                }}
+                className="w-full"
+              >
+                <CarouselContent>
+                  {services.map((service, index) => (
+                    <CarouselItem key={index} className="basis-full sm:basis-1/2 lg:basis-1/3">
+                      <motion.div 
+                        className={`bg-zinc-900/30 rounded-xl overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-500 group backdrop-blur-sm mx-1 min-h-[280px] sm:min-h-[400px] flex flex-col ${isRTL ? 'text-right' : 'text-left'}`}
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.3 + index * 0.1, ease: 'easeOut' }}
+                      >
+                        {/* Image */}
+                        <div className="h-32 sm:h-36 relative overflow-hidden flex-shrink-0">
+                          <img 
+                            src={service.image}
+                            alt={service.title}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/50 to-transparent" />
+                        </div>
+                        
+                        {/* Content */}
+                        <div className="p-3 sm:p-4 flex flex-col flex-1">
+                          <h3 className="text-white text-base sm:text-lg mb-1.5 sm:mb-2">{service.title}</h3>
+                          <p className="text-white/60 text-xs sm:text-sm mb-2 sm:mb-3 leading-relaxed line-clamp-2 flex-1">{service.description}</p>
+                          
+                          {/* Features */}
+                          <ul className={`space-y-1 sm:space-y-1.5 flex-shrink-0 ${isRTL ? 'text-right' : 'text-left'}`}>
+                            {service.features.slice(0, 3).map((feature, idx) => (
+                              <li key={idx} className={`flex items-start gap-1.5 sm:gap-2 text-white/50 text-[11px] sm:text-xs ${isRTL ? ' text-right' : 'text-left'}`}>
+                                <svg className={`w-3.5 h-3.5 sm:w-4 sm:h-4 text-cyan-400 mt-0.5 flex-shrink-0 ${isRTL ? 'ml-2' : 'mr-0'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>{feature}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </motion.div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious
+                  className="
+                    top-1/2 -translate-y-1/2
+                    inset-inline-start-2
+                    border-white/20 bg-white/5 text-white
+                    hover:bg-white/10 hover:border-white/30 z-10
+                  "
+                />
+                <CarouselNext
+                  className="
+                    top-1/2 -translate-y-1/2
+                    inset-inline-end-2
+                    border-white/20 bg-white/5 text-white
+                    hover:bg-white/10 hover:border-white/30 z-10
+                  "
+                />
+              </Carousel>
             </div>
-
           </div>
         </div>
       </div>

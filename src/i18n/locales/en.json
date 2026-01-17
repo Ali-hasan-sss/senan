@@ -104,6 +104,136 @@
       }
     }
   },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive defense and security solutions powered by cutting-edge technology",
+    "airDefense": {
+      "title": "Air Defense Systems",
+      "description": "Advanced air defense solutions to protect against aerial threats including drones, missiles, and aircraft.",
+      "features": {
+        "radar": "Radar detection systems",
+        "missile": "Missile interception technology",
+        "threat": "Real-time threat assessment",
+        "command": "Integrated command & control"
+      }
+    },
+    "spaceDefense": {
+      "title": "Space Defense Systems",
+      "description": "Satellite-based defense and surveillance systems for global security operations.",
+      "features": {
+        "satellite": "Satellite communication networks",
+        "surveillance": "Space-based surveillance",
+        "gps": "GPS and navigation systems",
+        "antiSatellite": "Anti-satellite capabilities"
+      }
+    },
+    "cyberSecurity": {
+      "title": "Cyber Security Defense System",
+      "description": "We deliver mission-critical cybersecurity solutions designed for complex environments. Our services include threat detection and response, secure systems architecture, and advanced protection for digital assets.",
+      "features": {
+        "threatDetection": "Threat detection & response",
+        "architecture": "Secure systems architecture",
+        "protection": "Digital asset protection",
+        "monitoring": "Network security monitoring"
+      }
+    },
+    "seaDefense": {
+      "title": "Sea Defense Systems",
+      "description": "Maritime surveillance and defense systems for coastal and naval operations.",
+      "features": {
+        "monitoring": "Naval vessel monitoring",
+        "radar": "Coastal surveillance radar",
+        "missile": "Anti-ship missile systems",
+        "detection": "Underwater threat detection"
+      }
+    },
+    "landDefense": {
+      "title": "Land Defense Systems",
+      "description": "Ground-based defense platforms and armored vehicle systems for land operations.",
+      "features": {
+        "carriers": "Armored personnel carriers",
+        "platforms": "Mobile defense platforms",
+        "surveillance": "Ground surveillance systems",
+        "networks": "Tactical communication networks"
+      }
+    }
+  },
+  "media": {
+    "title": "Media",
+    "subtitle": "Latest news, events and achievements",
+    "news": {
+      "partnership": {
+        "title": "SINAN Announces New Strategic Partnership",
+        "excerpt": "SINAN signed a strategic partnership agreement with one of the world's leading defense technology companies",
+        "date": "December 15, 2024"
+      },
+      "training": {
+        "title": "Launch of New Advanced Training Program",
+        "excerpt": "SINAN launches an advanced training program in modern defense systems",
+        "date": "December 10, 2024"
+      },
+      "cyberSecurity": {
+        "title": "SINAN Wins Major Cyber Security Contract",
+        "excerpt": "The company secured a contract to develop an integrated cyber security system",
+        "date": "December 5, 2024"
+      },
+      "exhibition": {
+        "title": "SINAN Participates in International Defense Exhibition",
+        "excerpt": "SINAN participated in the International Defense Exhibition and showcased its latest products",
+        "date": "December 1, 2024"
+      },
+      "research": {
+        "title": "SINAN Invests in Research and Development",
+        "excerpt": "The company announces major investment in R&D for future technologies",
+        "date": "November 25, 2024"
+      },
+      "communication": {
+        "title": "Completion of Military Communication System Project",
+        "excerpt": "SINAN announces completion of advanced military communication system development",
+        "date": "November 20, 2024"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We are here to answer your inquiries and assist you",
+    "email": {
+      "title": "Email",
+      "info": "info@sinan.com",
+      "support": "support@sinan.com"
+    },
+    "phone": {
+      "title": "Phone",
+      "phone1": "+966 11 XXX XXXX",
+      "phone2": "+966 11 XXX XXXX"
+    },
+    "address": {
+      "title": "Address",
+      "location": "Riyadh, Saudi Arabia"
+    },
+    "officeHours": {
+      "title": "Office Hours",
+      "weekdays": "Sunday - Thursday",
+      "weekdaysTime": "8:00 AM - 5:00 PM",
+      "weekend": "Friday - Saturday",
+      "closed": "Closed"
+    },
+    "form": {
+      "title": "Send us a Message",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "subjectPlaceholder": "Select Subject",
+      "subjectGeneral": "General Inquiry",
+      "subjectPartnership": "Partnership",
+      "subjectSupport": "Technical Support",
+      "subjectCareer": "Career Opportunities",
+      "message": "Message",
+      "sendButton": "Send Message",
+      "successMessage": "Your message has been sent successfully!"
+    }
+  },
   "common": {
     "language": "English",
     "english": "English",
