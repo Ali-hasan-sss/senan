@@ -1,0 +1,112 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "sectors": "Sectors",
+    "services": "Services",
+    "media": "Media",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Sinan Security",
+    "subtitle": "Advanced Security Solutions",
+    "description": "Leading the future of security technology with AI-powered surveillance, autonomous drones, and cutting-edge protection systems.",
+    "exploreSectors": "Explore Our Sectors",
+    "getInTouch": "Get In Touch"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "SINAN Advanced Industries is a leading company in the field of advanced defense and technology solutions",
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be the leading partner in delivering advanced defense and technology solutions that contribute to building a safer and more sustainable future"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To develop and deliver innovative solutions in defense, training, and communications through continuous innovation and operational excellence"
+    },
+    "values": {
+      "excellence": {
+        "title": "Excellence",
+        "description": "We always strive to deliver the highest quality standards in all our services and products"
+      },
+      "teamwork": {
+        "title": "Teamwork",
+        "description": "We believe in the power of collaboration and partnership to achieve our common goals"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "We invest in research and development to deliver advanced and innovative technical solutions"
+      }
+    }
+  },
+  "sectors": {
+    "title": "Sectors",
+    "subtitle": "We provide integrated solutions across various defense and technology sectors",
+    "defense": {
+      "title": "Defense Systems",
+      "description": "Integrated defense solutions including land, air and naval systems",
+      "features": {
+        "airDefense": "Air Defense Systems",
+        "landSystems": "Advanced Land Systems",
+        "navalSystems": "Naval Systems",
+        "cyberSecurity": "Cyber Security Systems"
+      }
+    },
+    "aviation": {
+      "title": "Aviation Systems",
+      "description": "Advanced solutions for aviation and air defense",
+      "features": {
+        "uas": "Unmanned Aerial Systems",
+        "radar": "Advanced Radar Systems",
+        "missile": "Missile Defense Systems",
+        "navigation": "Aviation Navigation Solutions"
+      }
+    },
+    "naval": {
+      "title": "Naval Systems",
+      "description": "Comprehensive maritime solutions for defense and maritime security",
+      "features": {
+        "defense": "Naval Defense Systems",
+        "surveillance": "Maritime Surveillance Solutions",
+        "communication": "Maritime Communication Systems",
+        "navigation": "Navigation Systems"
+      }
+    },
+    "communication": {
+      "title": "Communication Systems",
+      "description": "Advanced communication solutions for command and control",
+      "features": {
+        "networks": "Secure Communication Networks",
+        "c4isr": "C4ISR Systems",
+        "wireless": "Wireless Communication Solutions",
+        "encryption": "Data Encryption Systems"
+      }
+    },
+    "space": {
+      "title": "Space Systems",
+      "description": "Advanced space technologies for surveillance and communications",
+      "features": {
+        "satellite": "Satellite Systems",
+        "remoteSensing": "Remote Sensing Solutions",
+        "navigation": "Space Navigation Systems",
+        "applications": "Military Space Applications"
+      }
+    },
+    "training": {
+      "title": "Training & Services",
+      "description": "Specialized training programs and comprehensive maintenance services",
+      "features": {
+        "technical": "Specialized Technical Training",
+        "maintenance": "Maintenance and Repair Services",
+        "support": "Continuous Technical Support",
+        "development": "Professional Development Programs"
+      }
+    }
+  },
+  "common": {
+    "language": "English",
+    "english": "English",
+    "arabic": "العربية"
+  }
+}
